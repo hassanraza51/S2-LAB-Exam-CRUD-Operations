@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onreset="resetForm();" onclick="updateRecord(formData);" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off"><h1>Add/Update Person Form</h1>
+                    <div>
+                        <label>Album ID:</b>&emsp;&emsp;</label>
+                        <input type="number" name="id" id="id">
+                        
+                    </div>
+                    <div>
+                        <label><b>Title:</b>&emsp;&emsp;</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div>
+                        <label><b>Username:</b>&emsp;&emsp;</label>
+                        <input type="text" name="user" id="user">
+                    </div>
+                    <div>
+                        <label><b>Email:</b>&emsp;&emsp;</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="email" name="email" id="email" pattern=".+@.com" title="Plz add @.com" >
+                    </div>
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Add">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Update" id="update">
+                        
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList"><h1>List of Persons</h1>
+                    <thead>
+                        <tr>
+                            <th>Album ID</th>
+                            <th>Title</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
